@@ -7,19 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0966C5441F08FD2400F086CC /* OpenerServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0966C5431F08FD2400F086CC /* OpenerServer.swift */; };
+		0966C5491F090C8300F086CC /* IPAddres.m in Sources */ = {isa = PBXBuildFile; fileRef = 0966C5481F090C8300F086CC /* IPAddres.m */; };
+		0966C54C1F09152600F086CC /* VideoPlayerOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0966C54B1F09152600F086CC /* VideoPlayerOpener.swift */; };
+		0966C5561F091C3100F086CC /* quicktime.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 0966C5551F091C3100F086CC /* quicktime.scpt */; };
 		09A825D51F07DB7F0016E99C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A825D41F07DB7F0016E99C /* AppDelegate.swift */; };
 		09A825D71F07DB7F0016E99C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A825D61F07DB7F0016E99C /* ViewController.swift */; };
 		09A825D91F07DB7F0016E99C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A825D81F07DB7F0016E99C /* Assets.xcassets */; };
-		09A825DC1F07DB7F0016E99C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A825DA1F07DB7F0016E99C /* Main.storyboard */; };
+		09A825E41F07E2050016E99C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A825E31F07E2050016E99C /* MainMenu.xib */; };
+		C858029038B8E46B59BD18D0 /* Pods_VideoOpener.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1BAE1703D5114F956248B9 /* Pods_VideoOpener.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0966C5431F08FD2400F086CC /* OpenerServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenerServer.swift; sourceTree = "<group>"; };
+		0966C5471F090C8300F086CC /* VideoOpener-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VideoOpener-Bridging-Header.h"; sourceTree = "<group>"; };
+		0966C5481F090C8300F086CC /* IPAddres.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPAddres.m; sourceTree = "<group>"; };
+		0966C54A1F090E2800F086CC /* IPAddres.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPAddres.h; sourceTree = "<group>"; };
+		0966C54B1F09152600F086CC /* VideoPlayerOpener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerOpener.swift; sourceTree = "<group>"; };
+		0966C5551F091C3100F086CC /* quicktime.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = quicktime.scpt; sourceTree = "<group>"; };
 		09A825D11F07DB7E0016E99C /* VideoOpener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoOpener.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A825D41F07DB7F0016E99C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09A825D61F07DB7F0016E99C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		09A825D81F07DB7F0016E99C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		09A825DB1F07DB7F0016E99C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09A825DD1F07DB7F0016E99C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09A825E31F07E2050016E99C /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		4C775C691F1879387DDE5ABE /* Pods-VideoOpener.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoOpener.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideoOpener/Pods-VideoOpener.release.xcconfig"; sourceTree = "<group>"; };
+		CE1BAE1703D5114F956248B9 /* Pods_VideoOpener.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoOpener.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E43D6D3141CC5CFC883E5C23 /* Pods-VideoOpener.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoOpener.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VideoOpener/Pods-VideoOpener.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +41,59 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C858029038B8E46B59BD18D0 /* Pods_VideoOpener.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0966C54D1F09155A00F086CC /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				09A825D81F07DB7F0016E99C /* Assets.xcassets */,
+				09A825DD1F07DB7F0016E99C /* Info.plist */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		0966C54E1F09156C00F086CC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				09A825D41F07DB7F0016E99C /* AppDelegate.swift */,
+				09A825D61F07DB7F0016E99C /* ViewController.swift */,
+				09A825E31F07E2050016E99C /* MainMenu.xib */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		0966C54F1F09157B00F086CC /* IPResolve */ = {
+			isa = PBXGroup;
+			children = (
+				0966C5481F090C8300F086CC /* IPAddres.m */,
+				0966C54A1F090E2800F086CC /* IPAddres.h */,
+				0966C5471F090C8300F086CC /* VideoOpener-Bridging-Header.h */,
+			);
+			name = IPResolve;
+			sourceTree = "<group>";
+		};
+		0966C5501F0915A200F086CC /* Opener */ = {
+			isa = PBXGroup;
+			children = (
+				0966C5551F091C3100F086CC /* quicktime.scpt */,
+				0966C5431F08FD2400F086CC /* OpenerServer.swift */,
+				0966C54B1F09152600F086CC /* VideoPlayerOpener.swift */,
+			);
+			name = Opener;
+			sourceTree = "<group>";
+		};
 		09A825C81F07DB7E0016E99C = {
 			isa = PBXGroup;
 			children = (
 				09A825D31F07DB7F0016E99C /* VideoOpener */,
 				09A825D21F07DB7E0016E99C /* Products */,
+				DBB5710F7488C9B71CE98B9D /* Pods */,
+				E1F1BA83C7651EE411C9F5A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,13 +108,29 @@
 		09A825D31F07DB7F0016E99C /* VideoOpener */ = {
 			isa = PBXGroup;
 			children = (
-				09A825D41F07DB7F0016E99C /* AppDelegate.swift */,
-				09A825D61F07DB7F0016E99C /* ViewController.swift */,
-				09A825D81F07DB7F0016E99C /* Assets.xcassets */,
-				09A825DA1F07DB7F0016E99C /* Main.storyboard */,
-				09A825DD1F07DB7F0016E99C /* Info.plist */,
+				0966C54F1F09157B00F086CC /* IPResolve */,
+				0966C5501F0915A200F086CC /* Opener */,
+				0966C54E1F09156C00F086CC /* UI */,
+				0966C54D1F09155A00F086CC /* Support */,
 			);
 			path = VideoOpener;
+			sourceTree = "<group>";
+		};
+		DBB5710F7488C9B71CE98B9D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E43D6D3141CC5CFC883E5C23 /* Pods-VideoOpener.debug.xcconfig */,
+				4C775C691F1879387DDE5ABE /* Pods-VideoOpener.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E1F1BA83C7651EE411C9F5A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE1BAE1703D5114F956248B9 /* Pods_VideoOpener.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,9 +140,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09A825E01F07DB7F0016E99C /* Build configuration list for PBXNativeTarget "VideoOpener" */;
 			buildPhases = (
+				8172B52BA1A4421175353CD7 /* [CP] Check Pods Manifest.lock */,
 				09A825CD1F07DB7E0016E99C /* Sources */,
 				09A825CE1F07DB7E0016E99C /* Frameworks */,
 				09A825CF1F07DB7E0016E99C /* Resources */,
+				BFF8EF17F312A8EADBE19B76 /* [CP] Embed Pods Frameworks */,
+				E31880E5B2E6AA11A19A65AE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -94,7 +169,13 @@
 					09A825D01F07DB7E0016E99C = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 33X7BJXZ3T;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -121,35 +202,76 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0966C5561F091C3100F086CC /* quicktime.scpt in Resources */,
 				09A825D91F07DB7F0016E99C /* Assets.xcassets in Resources */,
-				09A825DC1F07DB7F0016E99C /* Main.storyboard in Resources */,
+				09A825E41F07E2050016E99C /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8172B52BA1A4421175353CD7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BFF8EF17F312A8EADBE19B76 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VideoOpener/Pods-VideoOpener-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E31880E5B2E6AA11A19A65AE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VideoOpener/Pods-VideoOpener-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		09A825CD1F07DB7E0016E99C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0966C5441F08FD2400F086CC /* OpenerServer.swift in Sources */,
+				0966C5491F090C8300F086CC /* IPAddres.m in Sources */,
 				09A825D71F07DB7F0016E99C /* ViewController.swift in Sources */,
+				0966C54C1F09152600F086CC /* VideoPlayerOpener.swift in Sources */,
 				09A825D51F07DB7F0016E99C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		09A825DA1F07DB7F0016E99C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				09A825DB1F07DB7F0016E99C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		09A825DE1F07DB7F0016E99C /* Debug */ = {
@@ -246,28 +368,35 @@
 		};
 		09A825E11F07DB7F0016E99C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E43D6D3141CC5CFC883E5C23 /* Pods-VideoOpener.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 33X7BJXZ3T;
 				INFOPLIST_FILE = VideoOpener/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = icebrick.VideoOpener;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VideoOpener/VideoOpener-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		09A825E21F07DB7F0016E99C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C775C691F1879387DDE5ABE /* Pods-VideoOpener.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 33X7BJXZ3T;
 				INFOPLIST_FILE = VideoOpener/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = icebrick.VideoOpener;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VideoOpener/VideoOpener-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -291,6 +420,7 @@
 				09A825E21F07DB7F0016E99C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
