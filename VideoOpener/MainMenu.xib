@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+=======
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+>>>>>>> working version
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
@@ -17,9 +21,14 @@
             <connections>
                 <outlet property="appMnenu" destination="aVN-EP-mWR" id="z6G-72-gkA"/>
                 <outlet property="currentIpMenuItem" destination="dGr-Gt-sPy" id="hQ1-yf-379"/>
+<<<<<<< HEAD
+                <outlet property="playerListMenu" destination="wPE-hW-bQ6" id="f9B-1i-bce"/>
+                <outlet property="startServerMenuItem" destination="3Ou-Ii-PI2" id="6od-UX-sUS"/>
+=======
                 <outlet property="quickTimeMenuItem" destination="yMz-c1-6mE" id="8kB-2r-AFI"/>
                 <outlet property="startServerMenuItem" destination="3Ou-Ii-PI2" id="6od-UX-sUS"/>
                 <outlet property="vlcMenuItem" destination="gcf-gd-fuG" id="7oc-tt-Uop"/>
+>>>>>>> working version
             </connections>
         </customObject>
         <menu id="aVN-EP-mWR">
@@ -35,6 +44,9 @@
                 </menuItem>
                 <menuItem title="Open In" id="nm8-5N-LBR">
                     <modifierMask key="keyEquivalentModifierMask"/>
+<<<<<<< HEAD
+                    <menu key="submenu" title="Open In" autoenablesItems="NO" id="wPE-hW-bQ6"/>
+=======
                     <menu key="submenu" title="Open In" autoenablesItems="NO" id="wPE-hW-bQ6">
                         <items>
                             <menuItem title="QuickTime" id="yMz-c1-6mE">
@@ -51,6 +63,7 @@
                             </menuItem>
                         </items>
                     </menu>
+>>>>>>> working version
                 </menuItem>
                 <menuItem title="Quit" keyEquivalent="q" id="aCR-hC-hl9">
                     <connections>
@@ -61,7 +74,11 @@
             <connections>
                 <outlet property="delegate" destination="F4l-id-LYi" id="2Dt-Td-G1E"/>
             </connections>
+<<<<<<< HEAD
+            <point key="canvasLocation" x="46" y="118"/>
+=======
             <point key="canvasLocation" x="48" y="379.5"/>
+>>>>>>> working version
         </menu>
     </objects>
 </document>
