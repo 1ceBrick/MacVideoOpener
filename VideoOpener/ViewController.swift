@@ -16,8 +16,13 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var currentIpMenuItem: NSMenuItem!
     @IBOutlet weak var startServerMenuItem: NSMenuItem!
+<<<<<<< HEAD
+    @IBOutlet weak var playerListMenu: NSMenu!
+    
+=======
     @IBOutlet weak var quickTimeMenuItem: NSMenuItem!
     @IBOutlet weak var vlcMenuItem: NSMenuItem!
+>>>>>>> working version
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -36,6 +41,21 @@ class ViewController: NSViewController {
         statusItem.highlightMode = true
         statusItem.menu = appMnenu
         
+<<<<<<< HEAD
+        statusItem.image = NSImage(imageLiteralResourceName: "NSSlideshowTemplate")
+        statusItem.image?.isTemplate = true
+//        statusItem.title = appName
+    }
+    
+    func initPlayerList() {
+        videoOpener.playerList.map {
+            let item = NSMenuItem()
+            item.title = $0.name
+            return item
+        }.forEach {
+            playerListMenu.addItem($0)
+        }
+=======
         statusItem.title = appName
         statusItem.image = NSImage(imageLiteralResourceName: "NSSlideshowTemplate")
         statusItem.image?.isTemplate = true
@@ -45,6 +65,7 @@ class ViewController: NSViewController {
     func initPlayerList() {
         vlcMenuItem.isEnabled = VideoPlayerOpener.Player.VLC.idAvailible
         quickTimeMenuItem.isEnabled = VideoPlayerOpener.Player.QuckTime.idAvailible
+>>>>>>> working version
     }
     
     func iniCurrentIp() {
@@ -63,16 +84,22 @@ class ViewController: NSViewController {
     
     @IBAction func playerSelected(_ sender: NSMenuItem) {
         switch sender {
+<<<<<<< HEAD
+=======
         case vlcMenuItem: videoOpener.selectedPlayer = .VLC
         case quickTimeMenuItem: videoOpener.selectedPlayer = .QuckTime
+>>>>>>> working version
         default: break
         }
         updateMenuItemsforSelectedPlayer()
     }
     
     func updateMenuItemsforSelectedPlayer() {
+<<<<<<< HEAD
+=======
         quickTimeMenuItem.state = videoOpener.selectedPlayer == .QuckTime ? NSOnState : NSOffState
         vlcMenuItem.state = videoOpener.selectedPlayer == .VLC ? NSOnState : NSOffState
+>>>>>>> working version
     }
     
     var serverIsOn = false {
