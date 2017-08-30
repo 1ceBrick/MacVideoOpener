@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		094C04941F575BE100293452 /* PlayersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094C04931F575BE100293452 /* PlayersProvider.swift */; };
 		0966C5441F08FD2400F086CC /* OpenerServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0966C5431F08FD2400F086CC /* OpenerServer.swift */; };
 		0966C5491F090C8300F086CC /* IPAddres.m in Sources */ = {isa = PBXBuildFile; fileRef = 0966C5481F090C8300F086CC /* IPAddres.m */; };
 		0966C54C1F09152600F086CC /* VideoPlayerOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0966C54B1F09152600F086CC /* VideoPlayerOpener.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		094C04931F575BE100293452 /* PlayersProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersProvider.swift; sourceTree = "<group>"; };
 		0966C5431F08FD2400F086CC /* OpenerServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenerServer.swift; sourceTree = "<group>"; };
 		0966C5471F090C8300F086CC /* VideoOpener-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VideoOpener-Bridging-Header.h"; sourceTree = "<group>"; };
 		0966C5481F090C8300F086CC /* IPAddres.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPAddres.m; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				0966C5551F091C3100F086CC /* quicktime.scpt */,
 				0966C5431F08FD2400F086CC /* OpenerServer.swift */,
 				0966C54B1F09152600F086CC /* VideoPlayerOpener.swift */,
+				094C04931F575BE100293452 /* PlayersProvider.swift */,
 			);
 			name = Opener;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0966C5441F08FD2400F086CC /* OpenerServer.swift in Sources */,
+				094C04941F575BE100293452 /* PlayersProvider.swift in Sources */,
 				0966C5491F090C8300F086CC /* IPAddres.m in Sources */,
 				09A825D71F07DB7F0016E99C /* ViewController.swift in Sources */,
 				0966C54C1F09152600F086CC /* VideoPlayerOpener.swift in Sources */,

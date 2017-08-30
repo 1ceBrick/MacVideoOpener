@@ -9,15 +9,8 @@ import AppKit
 
 class VideoPlayerOpener: OpenerHandler {
     struct Player: Equatable {
-        let name : String
         let appId : String
-        
-        init(appId: String) {
-            //todo claim name from appid
-            self.name = appId
-            self.appId = appId
-        }
-        
+        let name : String
         public static func ==(lhs: Player, rhs: Player) -> Bool {
             return lhs.appId == rhs.appId
         }
@@ -27,25 +20,21 @@ class VideoPlayerOpener: OpenerHandler {
     
     var selectedPlayer : Player?
     
-    init() {
-        playerList = VideoPlayerOpener.avalibleSystemPlayers
+    init(players: [Player]) {
+        playerList = players
         selectedPlayer = playerList.first
     }
 
     func request(for url: String, from: String) {
-        guard let url = URL(string: url
-                .trimmingCharacters(in: .whitespacesAndNewlines)
-                .addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!),
+        guard let safeUrl = url
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+            .addingPercentEncoding(withAllowedCharacters: .urlPathAllowed),
+            let url = URL(string: safeUrl),
             let selectedPlayer = selectedPlayer
             else { print("url is nil"); return }
-        AppKit.NSWorkspace.shared().open([url], withAppBundleIdentifier: selectedPlayer.appId,
-                                                options: NSWorkspaceLaunchOptions.default,
-                                                additionalEventParamDescriptor: nil,
-                                                launchIdentifiers: nil)
-    }
-    
-    private static var avalibleSystemPlayers: [Player] {
-        let playersIds = LSCopyAllRoleHandlersForContentType("public.movie" as CFString, .all)?.takeRetainedValue() as? [String]
-        return playersIds?.map(Player.init(appId:)) ?? []
+        NSWorkspace.shared().open([url], withAppBundleIdentifier: selectedPlayer.appId,
+                                         options: NSWorkspaceLaunchOptions.default,
+                                         additionalEventParamDescriptor: nil,
+                                         launchIdentifiers: nil)
     }
 }
