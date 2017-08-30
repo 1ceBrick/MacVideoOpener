@@ -37,17 +37,10 @@ class ViewController: NSViewController {
         statusItem.menu = appMnenu
         statusItem.image = NSImage(imageLiteralResourceName: "NSSlideshowTemplate")
         statusItem.image?.isTemplate = true
-//        statusItem.title = appName
     }
     
     func initPlayerList() {
-        videoOpener.playerList.map {
-            let item = NSMenuItem()
-            item.title = $0.name
-            return item
-        }.forEach {
-            playerListMenu.addItem($0)
-        }
+        updateMenuItemsforSelectedPlayer()
     }
     
     func iniCurrentIp() {
@@ -65,13 +58,23 @@ class ViewController: NSViewController {
     }
     
     @IBAction func playerSelected(_ sender: NSMenuItem) {
-        switch sender {
-        default: break
-        }
+        let index = playerListMenu.index(of: sender)
+        videoOpener.selectedPlayer = videoOpener.playerList[index]
         updateMenuItemsforSelectedPlayer()
     }
     
     func updateMenuItemsforSelectedPlayer() {
+        playerListMenu.removeAllItems()
+        videoOpener.playerList
+            .map { player in
+                let item = NSMenuItem(title: player.name,
+                                      action: #selector(self.playerSelected(_:)),
+                                      keyEquivalent: "")
+                item.target = self
+                item.state = videoOpener.selectedPlayer == player ? NSOnState : NSOffState
+                return item
+            }
+            .forEach(playerListMenu.addItem)
     }
     
     var serverIsOn = false {
