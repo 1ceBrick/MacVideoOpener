@@ -12,7 +12,7 @@ class SystemPlayersProvider {
     private static let predefinedIds = ["com.apple.QuickTimePlayerX", "org.videolan.vlc"]
 
     static var avalibleSystemPlayers: [VideoPlayerOpener.Player] {
-        return systemPlayerIds.map { VideoPlayerOpener.Player(appId: $0, name: findAppName(appId: $0)) }
+        return predefinedIds.map { VideoPlayerOpener.Player(appId: $0, name: findAppName(appId: $0)) }
     }
     
     static func findAppName(appId: String) -> String {
