@@ -26,15 +26,19 @@ class VideoPlayerOpener: OpenerHandler {
     }
 
     func request(for url: String, from: String) {
-        guard let safeUrl = url
-            .trimmingCharacters(in: .whitespacesAndNewlines)
-            .addingPercentEncoding(withAllowedCharacters: .urlPathAllowed),
-            let url = URL(string: safeUrl),
+        guard let safeUrl = prepareUrl(from: url),
+            let streamUrl = URL(string: safeUrl),
             let selectedPlayer = selectedPlayer
             else { print("url is nil"); return }
-        NSWorkspace.shared().open([url], withAppBundleIdentifier: selectedPlayer.appId,
-                                         options: NSWorkspaceLaunchOptions.default,
-                                         additionalEventParamDescriptor: nil,
-                                         launchIdentifiers: nil)
+        NSWorkspace.shared().open([streamUrl], withAppBundleIdentifier: selectedPlayer.appId,
+                                  options: NSWorkspaceLaunchOptions.default,
+                                  additionalEventParamDescriptor: nil,
+                                  launchIdentifiers: nil)
+        
+    }
+    
+    private func prepareUrl(from urlString:String) -> String? {
+        return urlString.trimmingCharacters(in: .whitespacesAndNewlines)
+                .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
     }
 }
