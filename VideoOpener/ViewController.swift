@@ -25,7 +25,7 @@ class ViewController: NSViewController {
     override func awakeFromNib() {
         initStatusItem()
         initPlayerList()
-        iniCurrentIp()
+        setupCurrentIp()
         updateMenuItemsforSelectedPlayer()
         serverIsOn = true
     }
@@ -43,7 +43,7 @@ class ViewController: NSViewController {
         updateMenuItemsforSelectedPlayer()
     }
     
-    func iniCurrentIp() {
+    func setupCurrentIp() {
         let currentIp = IPAddres.localIPAddress().first ?? ""
         currentIpMenuItem.title = currentIp
     }
@@ -82,6 +82,7 @@ class ViewController: NSViewController {
             startServerMenuItem.title = serverIsOn ? "Stop Server" : "Start Server"
             let statusIconName = serverIsOn ? "NSStatusUnavailable" : "NSStatusAvailable"
             startServerMenuItem.image = NSImage(imageLiteralResourceName: statusIconName)
+            setupCurrentIp()
             if serverIsOn {
                 server.start()
             } else {
