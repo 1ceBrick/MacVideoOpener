@@ -31,8 +31,8 @@ class ViewController: NSViewController {
     }
     
     func initStatusItem() {
-        statusItem = NSStatusBar.system()
-            .statusItem(withLength: NSVariableStatusItemLength)
+        statusItem = NSStatusBar.system
+            .statusItem(withLength: NSStatusItem.variableLength)
         statusItem.highlightMode = true
         statusItem.menu = appMnenu
         statusItem.image = NSImage(imageLiteralResourceName: "NSSlideshowTemplate")
@@ -54,7 +54,7 @@ class ViewController: NSViewController {
     
     @IBAction func quit(_ sender: Any) {
         server.stop()
-        NSApplication.shared().terminate(self)
+        NSApplication.shared.terminate(self)
     }
     
     @IBAction func playerSelected(_ sender: NSMenuItem) {
@@ -71,7 +71,7 @@ class ViewController: NSViewController {
                                       action: #selector(self.playerSelected(_:)),
                                       keyEquivalent: "")
                 item.target = self
-                item.state = videoOpener.selectedPlayer == player ? NSOnState : NSOffState
+                item.state = videoOpener.selectedPlayer == player ? .on : .off
                 return item
             }
             .forEach(playerListMenu.addItem)

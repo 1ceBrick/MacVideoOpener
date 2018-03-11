@@ -16,7 +16,7 @@ class SystemPlayersProvider {
     }
     
     static func findAppName(appId: String) -> String {
-        guard let appPath = NSWorkspace.shared().absolutePathForApplication(withBundleIdentifier: appId)
+        guard let appPath = NSWorkspace.shared.absolutePathForApplication(withBundleIdentifier: appId)
             else { return appId }
         return ((appPath as NSString).lastPathComponent as NSString).deletingPathExtension
     }

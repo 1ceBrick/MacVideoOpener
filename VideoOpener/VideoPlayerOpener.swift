@@ -30,8 +30,8 @@ class VideoPlayerOpener: OpenerHandler {
             let streamUrl = URL(string: safeUrl),
             let selectedPlayer = selectedPlayer
             else { print("url is nil"); return }
-        NSWorkspace.shared().open([streamUrl], withAppBundleIdentifier: selectedPlayer.appId,
-                                  options: NSWorkspaceLaunchOptions.default,
+        NSWorkspace.shared.open([streamUrl], withAppBundleIdentifier: selectedPlayer.appId,
+                                  options: NSWorkspace.LaunchOptions.default,
                                   additionalEventParamDescriptor: nil,
                                   launchIdentifiers: nil)
         
