@@ -16,6 +16,7 @@
 		09A825D71F07DB7F0016E99C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A825D61F07DB7F0016E99C /* ViewController.swift */; };
 		09A825D91F07DB7F0016E99C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A825D81F07DB7F0016E99C /* Assets.xcassets */; };
 		09A825E41F07E2050016E99C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A825E31F07E2050016E99C /* MainMenu.xib */; };
+		09D3E1D31FB8657D0018A906 /* OpenerPrococols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D3E1D21FB8657D0018A906 /* OpenerPrococols.swift */; };
 		C858029038B8E46B59BD18D0 /* Pods_VideoOpener.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1BAE1703D5114F956248B9 /* Pods_VideoOpener.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		09A825D81F07DB7F0016E99C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09A825DD1F07DB7F0016E99C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09A825E31F07E2050016E99C /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		09D3E1D21FB8657D0018A906 /* OpenerPrococols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenerPrococols.swift; sourceTree = "<group>"; };
 		4C775C691F1879387DDE5ABE /* Pods-VideoOpener.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoOpener.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideoOpener/Pods-VideoOpener.release.xcconfig"; sourceTree = "<group>"; };
 		CE1BAE1703D5114F956248B9 /* Pods_VideoOpener.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoOpener.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43D6D3141CC5CFC883E5C23 /* Pods-VideoOpener.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoOpener.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VideoOpener/Pods-VideoOpener.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				0966C5431F08FD2400F086CC /* OpenerServer.swift */,
 				0966C54B1F09152600F086CC /* VideoPlayerOpener.swift */,
 				094C04931F575BE100293452 /* PlayersProvider.swift */,
+				09D3E1D21FB8657D0018A906 /* OpenerPrococols.swift */,
 			);
 			name = Opener;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				0966C5491F090C8300F086CC /* IPAddres.m in Sources */,
 				09A825D71F07DB7F0016E99C /* ViewController.swift in Sources */,
 				0966C54C1F09152600F086CC /* VideoPlayerOpener.swift in Sources */,
+				09D3E1D31FB8657D0018A906 /* OpenerPrococols.swift in Sources */,
 				09A825D51F07DB7F0016E99C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

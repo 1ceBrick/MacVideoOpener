@@ -91,6 +91,6 @@ class ViewController: NSViewController {
     }
     
     lazy var videoOpener = VideoPlayerOpener(players: SystemPlayersProvider.avalibleSystemPlayers)
-    lazy var server: OpenerServer = OpenerServer(port: 4000, handler: self.videoOpener)
+    lazy var server: ConnectionServer = OpenerServer(port: 4000, handler: self.videoOpener)
 
 }

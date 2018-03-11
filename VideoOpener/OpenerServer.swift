@@ -9,7 +9,7 @@
 import Foundation
 import SwiftSocket
 
-class OpenerServer {
+class OpenerServer: ConnectionServer {
     private static let readSize = 1024*10
     
     private var server: TCPServer?
@@ -75,8 +75,4 @@ class OpenerServer {
         }
 
     }
-}
-
-protocol OpenerHandler: class {
-    func request(for url: String, from: String)
 }
