@@ -9,21 +9,31 @@
 import AppKit
 
 class SystemPlayersProvider {
-    private static let predefinedIds = ["com.apple.QuickTimePlayerX", "org.videolan.vlc"]
-
-    static var avalibleSystemPlayers: [VideoPlayerOpener.Player] {
-        return predefinedIds.map { VideoPlayerOpener.Player(appId: $0, name: findAppName(appId: $0)) }
-    }
+    private static let pathChecker = PathAvailabilityChecker()
+    static let vlc = Player(name: "VLC",
+                            availabilityChecker: pathChecker,
+                            openUrlHandler: ProcessOpenUrlHandler(launchPath: "/usr/bin/open",
+                                                                  defaultArguments: ["-a", "vlc"]))
+    static let quickTime = Player(name: "QuickTime Player",
+                                  availabilityChecker: pathChecker,
+                                  openUrlHandler: ProcessOpenUrlHandler(launchPath: "/usr/bin/open",
+                                                                        defaultArguments: ["-a", "quickTime player"]))
+    static let iina = Player(name: "IINA",
+                             availabilityChecker: pathChecker,
+                             openUrlHandler: ProcessOpenUrlHandler(launchPath: "/Applications/IINA.app/Contents/MacOS/IINA",
+                                                                   defaultArguments: []))
+    static let predefinedPlayers: [Player] = [vlc, quickTime, iina]
     
-    static func findAppName(appId: String) -> String {
-        guard let appPath = NSWorkspace.shared.absolutePathForApplication(withBundleIdentifier: appId)
-            else { return appId }
-        return ((appPath as NSString).lastPathComponent as NSString).deletingPathExtension
+    static var avalibleSystemPlayers: [Player] {
+        return predefinedPlayers.filter { $0.isAvailable }
     }
+//    static func findAppName(appId: String) -> String {
+//        guard let appPath = NSWorkspace.shared.absolutePathForApplication(withBundleIdentifier: appId)
+//            else { return appId }
+//        return ((appPath as NSString).lastPathComponent as NSString).deletingPathExtension
+//    }
 
-    static var systemPlayerIds:[String] {
-        return LSCopyAllRoleHandlersForContentType("public.movie" as CFString, .all)?
-            .takeRetainedValue() as? [String] ?? []
-    }
-    
+//    static func isAvailible(_ player: Player) -> Bool {
+//        return NSWorkspace.shared.fullPath(forApplication: player.name) != nil
+//    }
 }

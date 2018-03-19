@@ -7,34 +7,24 @@
 //
 import AppKit
 
-class VideoPlayerOpener: OpenerHandler {
-    struct Player: Equatable {
-        let appId : String
-        let name : String
-        public static func ==(lhs: Player, rhs: Player) -> Bool {
-            return lhs.appId == rhs.appId
-        }
-    }
-    
+class VideoPlayerOpener: OpenerHandler {    
     var playerList : [Player]
     
-    var selectedPlayer : Player?
+    var selectedPlayer : Player
     
     init(players: [Player]) {
         playerList = players
-        selectedPlayer = playerList.first
+        guard let firstPlayer = playerList.first else {
+            fatalError("no player provided to VideoPlayerOpener")
+        }
+        selectedPlayer = firstPlayer
     }
 
     func request(for url: String, from: String) {
         guard let safeUrl = prepareUrl(from: url),
-            let streamUrl = URL(string: safeUrl),
-            let selectedPlayer = selectedPlayer
+            let streamUrl = URL(string: safeUrl)
             else { print("url is nil"); return }
-        NSWorkspace.shared.open([streamUrl], withAppBundleIdentifier: selectedPlayer.appId,
-                                  options: NSWorkspace.LaunchOptions.default,
-                                  additionalEventParamDescriptor: nil,
-                                  launchIdentifiers: nil)
-        
+        selectedPlayer.open(url: streamUrl)
     }
     
     private func prepareUrl(from urlString:String) -> String? {
