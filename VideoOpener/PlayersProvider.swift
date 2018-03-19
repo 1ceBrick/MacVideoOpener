@@ -22,18 +22,9 @@ class SystemPlayersProvider {
                              availabilityChecker: pathChecker,
                              openUrlHandler: ProcessOpenUrlHandler(launchPath: "/Applications/IINA.app/Contents/MacOS/IINA",
                                                                    defaultArguments: []))
-    static let predefinedPlayers: [Player] = [vlc, quickTime, iina]
+    static let predefinedPlayers: [Player] = [iina, quickTime, vlc]
     
     static var avalibleSystemPlayers: [Player] {
         return predefinedPlayers.filter { $0.isAvailable }
     }
-//    static func findAppName(appId: String) -> String {
-//        guard let appPath = NSWorkspace.shared.absolutePathForApplication(withBundleIdentifier: appId)
-//            else { return appId }
-//        return ((appPath as NSString).lastPathComponent as NSString).deletingPathExtension
-//    }
-
-//    static func isAvailible(_ player: Player) -> Bool {
-//        return NSWorkspace.shared.fullPath(forApplication: player.name) != nil
-//    }
 }
